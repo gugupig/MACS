@@ -1,7 +1,3 @@
----
-title: MACS
----
-
 # MACS: Attention Consistency for LLM Explanation
 
 Implementation of MACS from the EMNLP Findings 2025 paper [Attention Consistency for LLMs Explanation](https://aclanthology.org/2025.findings-emnlp.91/)
@@ -65,6 +61,14 @@ macs vqa --image example.jpg --question "What is in the image?" --span-start 3 -
 - Currently support models like Qwen2.5,Qwen-VL and Llama3.1-8B.
 - More model support can be easily added since MACS only need attention score from each layer/head.
 - Set `attn_implementation="eager`.
+
+
+## Notebook-to-Package Mapping
+
+- Notebook cell `9` became the main logic in `src/macs/text_pipeline.py`.
+- Notebook cells `16-21` became the VQA utilities in `src/macs/vqa_pipeline.py` and `src/macs/visualization.py`.
+- Notebook cell `3` HTML rendering logic became `render_text_scores_html`.
+- Prompt and configuration constants were separated into dedicated modules so they can be reused from code or CLI.
 
 
 ## References
