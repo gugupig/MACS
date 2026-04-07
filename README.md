@@ -14,6 +14,12 @@ Compared with full attention aggregation methods such as Attention Rollout, MACS
 
 The result is a token attribution score that is simple enough to compute during inference, while still staying faithful enough to be useful for debugging and analysis.
 
+### MACS can do text QA attribution
+<img src="heatmap/QA attr.png" alt="Text QA attribution">
+
+### MACS can do VQA attribution
+<img src="heatmap/VQA attr.png" alt="Text QA attribution">
+
 ## Algorithm
 
 For each generation step:
